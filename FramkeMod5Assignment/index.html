@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framke Mod5 Assignment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/main.css">
+</head>
+
+<body>
+    <header>
+        <h1>Pantry Pal</h1>
+    </header>
+    <nav>
+
+    </nav>
+    <main>
+        <div class="wrapper">
+            <div class="content-flex">
+                <div class="item-List"> <!--"half-width"-->
+                    <form id="groceryListForm">
+                        <h2>Shop Smarter with Pantry Pal</h2>
+                        <h3>Add Items to Your Grocery List</h3>
+                        <label for="gListItem">Grocery Item:</label>
+                        <input name="gListItem" id="gListItem" type="text" required>
+
+                        <label for="gListItemQuantity">Quantity Desired:</label>
+                        <input name="gListItemQuantity" id="gListItemQuantity" type="number" min="0" required>
+
+                        <label for="gListItemCategory">Grocery Item Category</label>
+                        <select name="gListItemCategory" id="gListItemCategory" required>
+                            <option value="">------Choose the Item Category------</option>
+                            <option value="Produce">Produce</option>
+                            <option value="Meat">Meat</option>
+                            <option value="Baking">Baking</option>
+                            <option value="Grains">Grains</option>
+                            <option value="Dairy">Dairy</option>
+                            <option value="Other">Other</option>
+                        </select>
+
+                        <input name="submit" type="submit" value="Add Item">
+                    </form>
+                </div>
+                <div class="item-List"> <!--"half-width"-->
+                    <div id="pPalListArea">
+
+                        <h2 class="item-header">Your Pantry Pal Grocery List</h2>
+                        <h6>Click an item to mark it as "found"</h6>
+                    </div>
+                    <div class="pantryPalList">
+
+                    </div>
+                    <div class="button-container">
+                        <input id="itemFound" class="center" name="itemFound" type="button" value="Remove Found Items">
+                        <input id="itemFoundDisplay" class="foundDisplay" name="itemFoundDisplay" type="button"
+                            value="Show Found Items">
+                        <button id="resetGListButton">Reset Your Pantry Pal</button> <!--  reset button -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/src/js/groceryList.js"></script>
+</body>
+
+</html>
